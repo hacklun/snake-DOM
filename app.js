@@ -21,6 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
             direction = 1; // if we press the right arrow on our keyboard, the snake will go right one
         } else if (e.keyCode === 38) {
             direction = -width; // if we press the up arrow, the snake will go back ten divs, appearing to go up
+        } else if (e.keyCode === 37) {
+            direction = -1; // if we press left, the snake will go left one div
+        } else if (e.keyCode === 40) {
+            direction = +width; // if we press down, the snake head will instantly appear in the div ten divs from where you are now
         }
     }
 })
