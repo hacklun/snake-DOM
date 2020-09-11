@@ -13,6 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let intervalTime = 0;
     let interval = 0;
 
+    //to start and restart the game
+    function startGame() {
+        currentSnake.forEach(index => squares[index].classList.remove('snake'));
+    }
+
     //assign functions to keycodes
     function control(e) {
         squares[currentIndex].classList.remove('snake'); // we are removing the class of snake from ALL the squares
@@ -27,4 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
             direction = +width; // if we press down, the snake head will instantly appear in the div ten divs from where you are now
         }
     }
+
+    document.addEventListener('keyup', control);
 })
